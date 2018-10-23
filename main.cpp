@@ -20,10 +20,9 @@ int main(int argc, const char * argv[]) {
             std::cout<<"Input must be between 0 and 256\n";
     }
     
-    //initialize
+    //initialize and calculate the parity data
     hamming hamcode(initdata);
-    //calculate the parity data
-    hamcode.calcParity();
+    
     std::string lineBar = "                        -------------------------------------\n";
 
     std::cout<<"Bit                      0  1  2  3  4  5  6  7  8  9  10 11 \n"<<lineBar;
@@ -64,7 +63,7 @@ int main(int argc, const char * argv[]) {
         std::cout<<"| "<<hamcode.getParityData(e);
     }
     std::cout<<"|\n"<<lineBar;
-    std::cout<<"Error calculated at :"<<hamcode.getError()<<"\n\n";
+    std::cout<<"Error calculated at :"<<hamcode.error<<"\n\n";
     
     return 0;
 }
