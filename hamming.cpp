@@ -59,7 +59,7 @@ void hamming::calcParity(){
    
     parity_data[1]=(parity_data[2]+parity_data[5]+parity_data[6]+parity_data[9]+parity_data[10]) % 2;
     
-    parity_data[3]=(parity_data[4]+parity_data[5]+parity_data[6]) % 2;
+    parity_data[3]=(parity_data[4]+parity_data[5]+parity_data[6]+parity_data[11]) % 2;
    
     parity_data[7]=(parity_data[8]+parity_data[9]+parity_data[10]+parity_data[11]) % 2;
 
@@ -76,7 +76,7 @@ void hamming::checkParity(){
     errorarray[1] = (parity_data[1]+parity_data[2]+parity_data[5]+parity_data[6]+parity_data[9]+parity_data[10]) % 2;
     
     //check parity three
-    errorarray[2] = (parity_data[3]+parity_data[4]+parity_data[5]+parity_data[6]) % 2;
+    errorarray[2] = (parity_data[3]+parity_data[4]+parity_data[5]+parity_data[6]+parity_data[11]) % 2;
     
     //check parity four
     errorarray[3] = (parity_data[7]+parity_data[8]+parity_data[9]+parity_data[10]+parity_data[11]) % 2;
